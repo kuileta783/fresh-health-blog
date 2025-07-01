@@ -14,7 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Fresh Health Co",
+  title: {
+    default: "Fresh Health Co",
+    template: `%s | Fresh Health Co`,
+  },
   description: "Your ultimate destination for health and wellness insights.",
 };
 
