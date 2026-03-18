@@ -5,9 +5,18 @@ import { Button } from "@/components/ui/button"
 
 const featuredArticles = [
   {
+    id: 0,
+    title: "GLP-1 Medications Guide 2026: Complete Overview",
+    excerpt: "Everything you need to know about GLP-1 medications in 2026. From weight loss to chronic disease management, learn about the biggest health trend of the year.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    category: "Trending",
+    readTime: "8 min read",
+    href: "/article/glp-1-medications-guide-2026"
+  },
+  {
     id: 1,
     title: "Top 10 Best Vitamins for Immune Support 2025",
-    excerpt: "In 2025, immune support supplements offer effective, convenient solutions for better health. From vitamin C to zinc supplements, these products target immune system strengthening and daily wellness. Formulated with safe ingredients and proper dosages, they deliver noticeable results while prioritizing safety.",
+    excerpt: "In 2025, immune support supplements offer effective, convenient solutions for better health. From vitamin C to zinc supplements, these products target immune system strengthening and daily wellness.",
     image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     category: "Supplements",
     readTime: "5 min read",
@@ -16,7 +25,7 @@ const featuredArticles = [
   {
     id: 2,
     title: "Top 10 Best Protein Powders of 2025",
-    excerpt: "Discover the top 10 protein powders of 2025, designed for ultimate muscle building and recovery. These advanced formulas offer cutting-edge nutrition technology, ensuring optimal protein absorption. With various flavors and dietary options available.",
+    excerpt: "Discover the top 10 protein powders of 2025, designed for ultimate muscle building and recovery. These advanced formulas offer cutting-edge nutrition technology.",
     image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     category: "Fitness",
     readTime: "7 min read",
@@ -25,7 +34,7 @@ const featuredArticles = [
   {
     id: 3,
     title: "Top 10 Best Natural Sleep Aids 2025",
-    excerpt: "When it comes to improving your sleep quality, the best natural sleep aids provide gentle, effective solutions without harsh chemicals. These products support healthy sleep patterns with ingredients like melatonin, valerian root, and chamomile.",
+    excerpt: "When it comes to improving your sleep quality, the best natural sleep aids provide gentle, effective solutions without harsh chemicals.",
     image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     category: "Wellness",
     readTime: "6 min read",
@@ -34,7 +43,7 @@ const featuredArticles = [
   {
     id: 4,
     title: "Top 10 Best Yoga Mats of 2025",
-    excerpt: "In 2025, yoga mats have advanced to meet diverse fitness demands, delivering stability, comfort, and versatility for professional instructors and home practitioners alike. This curated list highlights models excelling in grip, durability, and eco-friendly materials.",
+    excerpt: "In 2025, yoga mats have advanced to meet diverse fitness demands, delivering stability, comfort, and versatility.",
     image: "https://images.unsplash.com/photo-1506629905996-617b33e5e4f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     category: "Fitness",
     readTime: "4 min read",
@@ -43,7 +52,7 @@ const featuredArticles = [
   {
     id: 5,
     title: "Top 10 Best Air Purifiers for Health 2025",
-    excerpt: "Looking for a reliable way to keep your home air clean and healthy? Air purifiers can be game-changers. These devices are designed to remove allergens, pollutants, and harmful particles from your indoor air, ensuring better respiratory health.",
+    excerpt: "Looking for a reliable way to keep your home air clean and healthy? Air purifiers can be game-changers.",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     category: "Home Health",
     readTime: "8 min read",
@@ -52,7 +61,7 @@ const featuredArticles = [
   {
     id: 6,
     title: "Top 10 Best Organic Skincare Products 2025",
-    excerpt: "In 2025, organic skincare excels with advanced natural formulations for precision and versatility. This curated list of the top 10 organic skincare products highlights cutting-edge solutions for face, body, and anti-aging care.",
+    excerpt: "In 2025, organic skincare excels with advanced natural formulations for precision and versatility.",
     image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
     category: "Beauty",
     readTime: "6 min read",
