@@ -31,6 +31,18 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/landpage.php",
+        destination: "/landpage",
+      },
+      {
+        source: "/red.php",
+        destination: "/landpage",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
