@@ -1,7 +1,9 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Badge } from "@/components/ui/badge"
-import { Dumbbell, Star, Check, X, ShieldCheck, Zap } from "lucide-react"
+import { Dumbbell, Star, Check, X, ShieldCheck, Zap, ShoppingCart, ExternalLink, Info } from "lucide-react"
+import Link from "next/link"
+import { getAmazonSearchUrl, AFFILIATE_REL, FTC_DISCLOSURE_SHORT } from "@/lib/affiliate"
 
 export const metadata = {
   title: "Top 10 Best Protein Powders of 2025/2026 | Fresh Health Co",
@@ -158,9 +160,19 @@ export default function ProteinPowdersArticlePage() {
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
             Top 10 Best Protein Powders of 2025/2026: Lab Tested for Purity & Muscle Recovery
           </h1>
-          <p className="text-gray-500 mb-8 text-sm">
+          <p className="text-gray-500 mb-4 text-sm">
             By <strong>Mike Chen (CSCS, Former Olympic Trainer)</strong> • Medically Reviewed • 11 min read
           </p>
+
+          <div className="bg-amber-50/90 border border-amber-200/80 rounded-xl p-3.5 text-xs text-amber-900 mb-8 flex items-start gap-2.5">
+            <Info className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+            <div className="leading-relaxed">
+              <strong>Affiliate Disclosure:</strong> {FTC_DISCLOSURE_SHORT}{" "}
+              <Link href="/affiliate-disclosure" className="underline font-semibold text-amber-950 hover:text-green-700">
+                Read full disclosure
+              </Link>.
+            </div>
+          </div>
           
           <div className="relative rounded-2xl overflow-hidden mb-10 shadow-md">
             <img 
@@ -250,6 +262,20 @@ export default function ProteinPowdersArticlePage() {
                         ))}
                       </ul>
                     </div>
+                  </div>
+
+                  <div className="mt-4 pt-3 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <span className="text-xs text-gray-500">Live verified pricing & customer ratings</span>
+                    <a
+                      href={getAmazonSearchUrl(item.name)}
+                      target="_blank"
+                      rel={AFFILIATE_REL}
+                      className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs shadow-sm transition-all"
+                    >
+                      <ShoppingCart className="w-3.5 h-3.5" />
+                      Check Price on Amazon
+                      <ExternalLink className="w-3 h-3 opacity-70" />
+                    </a>
                   </div>
                 </div>
               ))}

@@ -1,8 +1,9 @@
 import Link from "next/link"
-import { Star, Clock, Users, Award } from "lucide-react"
+import { Star, Clock, Users, Award, ShoppingCart, ExternalLink } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import type { Product } from "@/lib/products"
+import { getAmazonSearchUrl, AFFILIATE_REL } from "@/lib/affiliate"
 
 interface ProductCardProps {
   product: Product
@@ -113,19 +114,25 @@ export default function ProductCard({ product }: ProductCardProps) {
           </span>
         </div>
 
-        {/* Footer */}
-        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-          <div className="flex items-center text-sm text-gray-500">
-            <Clock className="w-4 h-4 mr-1" />
-            {product.readTime}
-          </div>
-
+        {/* Footer & Action Buttons */}
+        <div className="pt-4 border-t border-gray-100 flex items-center justify-between gap-2">
           <Link
             href={`/review/${product.id}`}
-            className="text-green-600 hover:text-green-700 font-semibold text-sm transition-colors"
+            className="text-gray-700 hover:text-green-600 font-semibold text-xs transition-colors"
           >
-            Read Review →
+            Review Details →
           </Link>
+
+          <a
+            href={getAmazonSearchUrl(product.title)}
+            target="_blank"
+            rel={AFFILIATE_REL}
+            className="inline-flex items-center gap-1 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg text-xs shadow-sm transition-all"
+          >
+            <ShoppingCart className="w-3 h-3" />
+            Check Price
+            <ExternalLink className="w-2.5 h-2.5 opacity-60" />
+          </a>
         </div>
       </CardContent>
     </Card>

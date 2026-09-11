@@ -24,8 +24,11 @@ export default function Footer() {
   const policyLinks = [
     { name: "About Us", href: "/about" },
     { name: "Contact Us", href: "/contact" },
-    { name: "Disclaimer", href: "/disclaimer" },
+    { name: "Affiliate Disclosure", href: "/affiliate-disclosure" },
+    { name: "Editorial Guidelines", href: "/editorial-guidelines" },
+    { name: "Medical Disclaimer", href: "/disclaimer" },
     { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Cookie Policy", href: "/cookie-policy" },
     { name: "Terms & Conditions", href: "/terms-conditions" }
   ]
 
@@ -145,21 +148,28 @@ export default function Footer() {
         </div>
 
         {/* Disclaimer Bar */}
-        <div className="border-t border-gray-800/80 mt-12 pt-6 text-xs text-gray-500 leading-relaxed">
+        <div className="border-t border-gray-800/80 mt-12 pt-6 text-xs text-gray-500 leading-relaxed space-y-2">
           <p>
-            <strong>Disclaimer:</strong> Content on Fresh Health Co is for informational and educational purposes only and does not substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional before starting any new supplement or wellness regimen.
+            <strong>Medical Disclaimer:</strong> Content on Fresh Health Co is for informational and educational purposes only and does not substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional before starting any new supplement or wellness regimen.
+          </p>
+          <p>
+            <strong>Affiliate & Advertising Disclosure:</strong> Fresh Health Co participates in various affiliate marketing programs, including the Amazon Services LLC Associates Program. When you purchase through links on our site, we may earn an affiliate commission at no extra cost to you. As an Amazon Associate, we earn from qualifying purchases. <Link href="/affiliate-disclosure" className="text-green-400 hover:underline">Read our full Affiliate Disclosure</Link>.
           </p>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800/80 mt-6 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
           <p>© {currentYear} Fresh Health Co. All rights reserved. | freshhealthco.com</p>
-          <div className="flex gap-4 mt-3 sm:mt-0">
+          <div className="flex flex-wrap gap-4 mt-3 sm:mt-0 justify-center">
             <Link href="/privacy-policy" className="hover:text-green-400 transition">Privacy</Link>
             <span>•</span>
             <Link href="/terms-conditions" className="hover:text-green-400 transition">Terms</Link>
             <span>•</span>
-            <Link href="/disclaimer" className="hover:text-green-400 transition">Medical Disclaimer</Link>
+            <Link href="/affiliate-disclosure" className="hover:text-green-400 transition">Affiliate Disclosure</Link>
+            <span>•</span>
+            <Link href="/editorial-guidelines" className="hover:text-green-400 transition">Editorial Policy</Link>
+            <span>•</span>
+            <Link href="/cookie-policy" className="hover:text-green-400 transition">Cookies</Link>
           </div>
         </div>
       </div>

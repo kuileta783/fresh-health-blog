@@ -1,4 +1,5 @@
-import { Search, BarChart3, CheckCircle } from "lucide-react"
+import { Search, BarChart3, CheckCircle, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 const steps = [
   {
@@ -46,6 +47,15 @@ export default function HowItWorksSection() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            href="/editorial-guidelines"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 transition-all hover:-translate-y-0.5"
+          >
+            Learn About Our Editorial Standards & Testing Methodology <ArrowRight className="w-4 h-4 text-green-400" />
+          </Link>
         </div>
       </div>
     </section>

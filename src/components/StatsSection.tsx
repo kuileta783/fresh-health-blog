@@ -1,3 +1,6 @@
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+
 export default function StatsSection() {
   const stats = [
     {
@@ -56,19 +59,25 @@ export default function StatsSection() {
           ))}
         </div>
 
-        {/* Featured Badge */}
+        {/* Featured Badge - Clickable Link */}
         <div className="mt-16 flex justify-center">
-          <div className="bg-white rounded-lg p-6 text-center max-w-sm shadow-lg">
-            <div className="text-2xl font-bold text-gray-900 mb-2">
+          <Link
+            href="/category/wellness"
+            className="group block bg-white rounded-2xl p-6 text-center max-w-sm shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 cursor-pointer border border-gray-100"
+          >
+            <div className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-bold uppercase tracking-wider mb-2">
               TOP 10
             </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-2">
+            <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
               BEST TOP PICKS
             </h3>
-            <p className="text-gray-600 text-sm">
-              A curated selection of the finest choices, carefully handpicked for quality, performance, and value
+            <p className="text-gray-600 text-sm leading-relaxed mb-3">
+              A curated selection of the finest choices, carefully handpicked for quality, clinical performance, and value.
             </p>
-          </div>
+            <div className="text-sm font-semibold text-green-600 flex items-center justify-center gap-1 group-hover:gap-2 transition-all">
+              Explore Our Top Picks <ArrowRight className="w-4 h-4" />
+            </div>
+          </Link>
         </div>
       </div>
     </section>

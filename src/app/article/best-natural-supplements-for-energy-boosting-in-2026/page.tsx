@@ -1,6 +1,9 @@
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { Badge } from "@/components/ui/badge"
+import Link from "next/link"
+import { ShoppingCart, ExternalLink, Info } from "lucide-react"
+import { getAmazonSearchUrl, AFFILIATE_REL, FTC_DISCLOSURE_SHORT } from "@/lib/affiliate"
 
 export const metadata = {
   title: "Best Natural Supplements for Energy Boosting in 2026 | Fresh Health Co",
@@ -63,7 +66,17 @@ export default function ArticlePage() {
         <div className="container mx-auto px-4 max-w-4xl">
           <Badge className="mb-4">Supplements</Badge>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Best Natural Supplements for Energy Boosting in 2026</h1>
-          <p className="text-gray-600 mb-8">Updated: March 2026 • 12 min read</p>
+          <p className="text-gray-600 mb-4">Updated: March 2026 • 12 min read</p>
+          
+          <div className="bg-amber-50/90 border border-amber-200/80 rounded-xl p-3.5 text-xs text-amber-900 mb-8 flex items-start gap-2.5">
+            <Info className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+            <div className="leading-relaxed">
+              <strong>Affiliate Disclosure:</strong> {FTC_DISCLOSURE_SHORT}{" "}
+              <Link href="/affiliate-disclosure" className="underline font-semibold text-amber-950 hover:text-green-700">
+                Read full disclosure
+              </Link>.
+            </div>
+          </div>
           
           <img 
             src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
@@ -124,6 +137,18 @@ export default function ArticlePage() {
               Beyond energy, CoQ10 provides additional benefits for cardiovascular health and acts as a powerful 
               antioxidant, protecting cells from damage that can impair energy production systems over time.
             </p>
+            <div className="not-prose my-4">
+              <a
+                href={getAmazonSearchUrl("CoQ10 Ubiquinol supplement 200mg")}
+                target="_blank"
+                rel={AFFILIATE_REL}
+                className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs shadow-sm transition-all"
+              >
+                <ShoppingCart className="w-3.5 h-3.5" />
+                Check Price: Top-Rated CoQ10 on Amazon
+                <ExternalLink className="w-3 h-3 opacity-70" />
+              </a>
+            </div>
 
             <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">2. B-Complex Vitamins</h3>
             <p className="text-gray-700 mb-4">
@@ -141,6 +166,18 @@ export default function ArticlePage() {
               that can occur when taking individual B vitamins in isolation. Look for methylated forms of B12 
               and folate for superior absorption, especially if you have MTHFR gene variants.
             </p>
+            <div className="not-prose my-4">
+              <a
+                href={getAmazonSearchUrl("Methylated B Complex Vitamin")}
+                target="_blank"
+                rel={AFFILIATE_REL}
+                className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs shadow-sm transition-all"
+              >
+                <ShoppingCart className="w-3.5 h-3.5" />
+                Check Price: Top Methylated B-Complex on Amazon
+                <ExternalLink className="w-3 h-3 opacity-70" />
+              </a>
+            </div>
 
             <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">3. Ashwagandha (Withania somnifera)</h3>
             <p className="text-gray-700 mb-4">
@@ -160,6 +197,18 @@ export default function ArticlePage() {
               at its source, making it particularly valuable for those whose fatigue stems from demanding lifestyles, 
               high-pressure work environments, or intense training schedules.
             </p>
+            <div className="not-prose my-4">
+              <a
+                href={getAmazonSearchUrl("KSM-66 Ashwagandha Organic Supplement")}
+                target="_blank"
+                rel={AFFILIATE_REL}
+                className="inline-flex items-center gap-1.5 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs shadow-sm transition-all"
+              >
+                <ShoppingCart className="w-3.5 h-3.5" />
+                Check Price: Top Organic Ashwagandha on Amazon
+                <ExternalLink className="w-3 h-3 opacity-70" />
+              </a>
+            </div>
 
             <h3 className="text-xl font-bold text-gray-900 mt-6 mb-2">4. Magnesium</h3>
             <p className="text-gray-700 mb-4">

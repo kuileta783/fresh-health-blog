@@ -2,9 +2,9 @@ import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import Breadcrumb from "@/components/Breadcrumb"
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Star, Check, X, Award, ShieldCheck, Clock, ArrowRight, Heart } from "lucide-react"
-import { products, categories, type Product } from "@/lib/products"
+import { Star, Check, X, Award, ShieldCheck, Clock, ArrowRight, ShoppingCart, ExternalLink, Info } from "lucide-react"
+import { products, categories } from "@/lib/products"
+import { getAmazonSearchUrl, AFFILIATE_REL, FTC_DISCLOSURE_SHORT } from "@/lib/affiliate"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 
@@ -52,6 +52,8 @@ export default async function ProductReviewPage({ params }: Props) {
     { label: categoryInfo?.name || "Categories", href: `/category/${product.category}` },
     { label: product.title },
   ]
+
+  const amazonUrl = getAmazonSearchUrl(product.title)
 
   return (
     <>
@@ -107,24 +109,35 @@ export default async function ProductReviewPage({ params }: Props) {
               <span className="text-gray-300">•</span>
               <span className="font-semibold text-green-700 text-base">Estimated Price: {product.price}</span>
             </div>
+
+            {/* FTC Affiliate Disclosure Notice */}
+            <div className="bg-amber-50/90 border border-amber-200/80 rounded-xl p-3.5 text-xs text-amber-900 mt-5 flex items-start gap-2.5">
+              <Info className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+              <div className="leading-relaxed">
+                <strong>Affiliate Notice:</strong> {FTC_DISCLOSURE_SHORT}{" "}
+                <Link href="/affiliate-disclosure" className="underline font-semibold text-amber-950 hover:text-green-700">
+                  Read full disclosure
+                </Link>.
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Hero Card & Summary */}
         <div className="container mx-auto px-4 max-w-5xl mt-8">
           <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-8 p-6 md:p-8 items-center">
-            <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-gray-100">
+            <div className="relative rounded-xl overflow-hidden aspect-[4/3] bg-gray-100 group">
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
 
             <div className="space-y-4">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
-                Tested by Fresh Health Editorial Lab
+                Tested & Verified by Fresh Health Lab
               </div>
 
               <h2 className="text-2xl font-bold text-gray-900 leading-snug">
@@ -149,10 +162,27 @@ export default async function ProductReviewPage({ params }: Props) {
                 </div>
               </div>
 
-              <div className="pt-2">
-                <Button className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg px-6 py-2.5">
-                  Check Current Pricing & Deals
-                </Button>
+              {/* Affiliate Action Buttons */}
+              <div className="pt-3 flex flex-col sm:flex-row gap-3">
+                <a
+                  href={amazonUrl}
+                  target="_blank"
+                  rel={AFFILIATE_REL}
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold rounded-xl px-6 py-3.5 text-sm shadow-md transition-all transform hover:-translate-y-0.5"
+                >
+                  <ShoppingCart className="w-4 h-4 text-slate-900" />
+                  Check Price on Amazon
+                  <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+                </a>
+                <a
+                  href={getAmazonSearchUrl(`${product.title} verified store`)}
+                  target="_blank"
+                  rel={AFFILIATE_REL}
+                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-50 border border-gray-300 text-gray-800 font-semibold rounded-xl px-5 py-3.5 text-sm transition-colors"
+                >
+                  View on Official Retailer
+                  <ExternalLink className="w-3.5 h-3.5 text-gray-500" />
+                </a>
               </div>
             </div>
           </div>
@@ -231,6 +261,28 @@ export default async function ProductReviewPage({ params }: Props) {
               <strong> {product.title}</strong> delivers outstanding quality and reliable outcomes. We confidently recommend it 
               for anyone seeking effective, science-backed solutions in the {categoryInfo?.name || "wellness"} space.
             </p>
+
+            {/* Bottom Conversion Box */}
+            <div className="not-prose mt-8 p-6 bg-gradient-to-r from-emerald-50 to-green-50 rounded-2xl border border-green-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <h4 className="text-lg font-bold text-gray-900 mb-1">
+                  Ready to Try {product.title}?
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Compare customer reviews, check live inventory, and view today's discounts.
+                </p>
+              </div>
+              <a
+                href={amazonUrl}
+                target="_blank"
+                rel={AFFILIATE_REL}
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-slate-950 font-bold px-6 py-3 rounded-xl text-sm shadow-md transition-all flex-shrink-0"
+              >
+                <ShoppingCart className="w-4 h-4" />
+                Check Current Price
+                <ExternalLink className="w-3.5 h-3.5 opacity-70" />
+              </a>
+            </div>
           </div>
         </div>
 
@@ -251,21 +303,33 @@ export default async function ProductReviewPage({ params }: Props) {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedProducts.map((rel) => (
-                <div key={rel.id} className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition">
-                  <img src={rel.image} alt={rel.title} className="w-full h-40 object-cover" />
-                  <div className="p-4">
-                    <h4 className="font-bold text-gray-900 text-base mb-1 line-clamp-1">
-                      {rel.title}
-                    </h4>
-                    <p className="text-xs text-gray-500 mb-3 line-clamp-2">
-                      {rel.excerpt}
-                    </p>
+                <div key={rel.id} className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                  <div>
+                    <img src={rel.image} alt={rel.title} className="w-full h-40 object-cover" />
+                    <div className="p-4">
+                      <h4 className="font-bold text-gray-900 text-base mb-1 line-clamp-1">
+                        {rel.title}
+                      </h4>
+                      <p className="text-xs text-gray-500 mb-3 line-clamp-2">
+                        {rel.excerpt}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="p-4 pt-0 flex items-center justify-between border-t border-gray-100 pt-3">
                     <Link
                       href={`/review/${rel.id}`}
                       className="text-green-600 hover:text-green-700 font-semibold text-xs flex items-center gap-1"
                     >
                       Read Review <ArrowRight className="w-3 h-3" />
                     </Link>
+                    <a
+                      href={getAmazonSearchUrl(rel.title)}
+                      target="_blank"
+                      rel={AFFILIATE_REL}
+                      className="text-amber-700 hover:text-amber-800 font-bold text-xs flex items-center gap-1"
+                    >
+                      Price <ExternalLink className="w-3 h-3" />
+                    </a>
                   </div>
                 </div>
               ))}
