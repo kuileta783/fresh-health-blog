@@ -4,6 +4,8 @@ import { getTrafficRule } from "@/lib/traffic-config"
 import { ShieldCheck, Sparkles, HeartPulse, Activity, Moon, CheckCircle2, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
+export const dynamic = "force-dynamic"
+
 interface Props {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }
