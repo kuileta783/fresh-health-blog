@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
   <url>
     <loc>https://www.freshhealthco.com/</loc>
     <changefreq>daily</changefreq>
@@ -14,6 +15,28 @@
     <loc>https://www.freshhealthco.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/privacy-policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/terms-conditions</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/disclaimer</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Categories -->
+  <url>
+    <loc>https://www.freshhealthco.com/category/beauty</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.freshhealthco.com/category/supplements</loc>
@@ -36,62 +59,161 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.freshhealthco.com/category/beauty</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://www.freshhealthco.com/category/home-health</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Editorial Articles & Guides -->
   <url>
-    <loc>https://www.freshhealthco.com/review/glp-1-medications-guide-2026</loc>
+    <loc>https://www.freshhealthco.com/article/glp-1-medications-guide-2026</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/article/best-natural-supplements-for-energy-boosting-in-2026</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/article/best-vitamins-immune-support</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.freshhealthco.com/review/multivitamins-2025</loc>
+    <loc>https://www.freshhealthco.com/article/best-natural-sleep-aids</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.freshhealthco.com/article/best-protein-powders</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/article/best-yoga-mats</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/article/best-air-purifiers</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/article/best-organic-skincare</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Product Reviews -->
   <url>
     <loc>https://www.freshhealthco.com/review/vitamin-c-serum-2025</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/retinol-creams-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/hyaluronic-acid-serum-2025</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.freshhealthco.com/review/mineral-sunscreen-spf50-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/multivitamins-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.freshhealthco.com/review/omega-3-supplements-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/vitamin-d3-k2-drops-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/collagen-peptides-powder-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/home-gym-equipment-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/running-shoes-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/adjustable-kettlebell-set-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/non-slip-yoga-mats-2025</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.freshhealthco.com/review/protein-powders-2025</loc>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/organic-super-greens-powder-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/electrolyte-hydration-powder-2025</loc>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.freshhealthco.com/review/meditation-apps-2025</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.freshhealthco.com/article/glp-1-medications-guide-2026</loc>
-    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.freshhealthco.com/article/best-vitamins-immune-support</loc>
+    <loc>https://www.freshhealthco.com/review/red-light-therapy-lamp-2025</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.freshhealthco.com/article/best-natural-supplements-for-energy-boosting-in-2026</loc>
+    <loc>https://www.freshhealthco.com/review/aromatherapy-diffuser-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/blood-pressure-monitors-2025</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.freshhealthco.com/article/best-protein-powders</loc>
+    <loc>https://www.freshhealthco.com/review/hepa-air-purifiers-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/smart-body-scale-2025</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.freshhealthco.com/review/infrared-forehead-thermometer-2025</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

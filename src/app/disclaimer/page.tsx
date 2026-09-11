@@ -196,9 +196,10 @@ export default function DisclaimerPage() {
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
                 <p className="text-gray-700 mb-2"><strong>Fresh Health Co</strong></p>
-                <p className="text-gray-700 mb-2">Email: info@freshhealthco.com</p>
-                <p className="text-gray-700 mb-2">Phone: +1 (555) 123-4567</p>
-                <p className="text-gray-700">Website: https://freshhealthco.com</p>
+                <p className="text-gray-700 mb-2">Email: <a href="mailto:support@freshhealthco.com" className="text-green-600 underline">support@freshhealthco.com</a></p>
+                <p className="text-gray-700 mb-2">Phone: <a href="tel:+19549982822" className="text-green-600 underline">+1 (954) 998-2822</a></p>
+                <p className="text-gray-700 mb-2">Address: 14461 Sw 139 Ave. Cir., Miami, FL 33186</p>
+                <p className="text-gray-700">Website: <a href="https://www.freshhealthco.com" className="text-green-600 underline">https://www.freshhealthco.com</a></p>
               </div>
 
               <div className="mt-12 p-6 bg-blue-50 rounded-lg">

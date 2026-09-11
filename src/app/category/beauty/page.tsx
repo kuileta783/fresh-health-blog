@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useMemo } from "react"
+import Link from "next/link"
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import Breadcrumb from "@/components/Breadcrumb"
@@ -154,7 +155,7 @@ export default function BeautyPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
               {Object.entries(categories).filter(([key]) => key !== 'beauty').map(([key, cat]) => (
-                <a
+                <Link
                   key={key}
                   href={`/category/${key}`}
                   className="group text-center p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
@@ -163,7 +164,7 @@ export default function BeautyPage() {
                   <h3 className="font-semibold text-gray-900 group-hover:text-pink-600 transition-colors">
                     {cat.name}
                   </h3>
-                </a>
+                </Link>
               ))}
             </div>
           </div>

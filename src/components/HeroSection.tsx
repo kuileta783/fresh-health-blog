@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -11,7 +12,7 @@ const heroSlides = [
     description: "Discover the best products for your health journey. From supplements to fitness gear, we bring you expertly reviewed items that support your wellness goals and help you live your healthiest life.",
     buttonText: "View All Products",
     backgroundImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    buttonLink: "/category/health-wellness"
+    buttonLink: "/category/wellness"
   },
   {
     id: 2,
@@ -75,9 +76,12 @@ export default function HeroSection() {
                 </p>
                 <Button
                   size="lg"
-                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg font-semibold rounded-full"
+                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg font-semibold rounded-full shadow-lg transition-transform hover:scale-105"
+                  asChild
                 >
-                  {slide.buttonText}
+                  <Link href={slide.buttonLink}>
+                    {slide.buttonText}
+                  </Link>
                 </Button>
               </div>
             </div>

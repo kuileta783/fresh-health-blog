@@ -19,7 +19,7 @@ export default function RetinolCreamsPage() {
           <p className="text-gray-600 mb-8">Updated: January 2025 • 6 min read</p>
           
           <img 
-            src="https://images.unsplash.com/photo-1571875257401-60b3bf0ee9dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            src="https://images.unsplash.com/photo-1556228720-195a672e8a03?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
             alt="Retinol Creams"
             className="w-full h-64 object-cover rounded-lg mb-8"
           />

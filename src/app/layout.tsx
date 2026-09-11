@@ -14,22 +14,38 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.freshhealthco.com"),
   title: {
-    default: "Fresh Health Co",
+    default: "Fresh Health Co | Trusted Health, Wellness & Product Reviews",
     template: `%s | Fresh Health Co`,
   },
-  description: "Your ultimate destination for health and wellness insights.",
+  description: "Your ultimate destination for health, wellness, and evidence-based product reviews. Expert testing, transparent ratings, and wellness insights.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
-    title: "Fresh Health Co",
-    description: "Your ultimate destination for health and wellness insights.",
+    title: "Fresh Health Co | Trusted Health & Wellness Reviews",
+    description: "Your ultimate destination for health, wellness, and evidence-based product reviews.",
+    url: "https://www.freshhealthco.com",
     type: "website",
     locale: "en_US",
     siteName: "Fresh Health Co",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fresh Health Co - Trusted Health & Wellness Insights",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fresh Health Co",
-    description: "Your ultimate destination for health and wellness insights.",
+    title: "Fresh Health Co | Trusted Health & Wellness Reviews",
+    description: "Your ultimate destination for health, wellness, and evidence-based product reviews.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,

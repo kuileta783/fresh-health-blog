@@ -20,7 +20,7 @@ export default function AboutPage() {
       name: "Dr. Emily Rodriguez",
       role: "Research Director",
       description: "PhD in biochemistry with focus on supplement research",
-      image: "https://images.unsplash.com/photo-1594824388101-369d8c8b8e4d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+      image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
     }
   ]
 
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <img
-                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                    src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                     alt="Health and wellness team"
                     className="rounded-lg shadow-lg w-full h-auto"
                   />
